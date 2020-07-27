@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Linked Data Fragments client</title>
+  <!-- <title>Linked Data Fragments client</title> -->
+  <title>Query interface</title>
   <link rel=stylesheet href="styles/yasqe.css">
   <link rel=stylesheet href="styles/ldf-client.css">
   <link rel=stylesheet href="//fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700">
@@ -11,9 +12,9 @@
 </head>
 <body>
   <header>
-    <a class="logo" href="http://linkeddatafragments.org/"><img src="images/logo.svg" alt="" /></a>
-    <h1><a href="#">Query the Web of Linked Data</a></h1>
-    <p><a href="http://comunica.linkeddatafragments.org/" target="_blank">Live in your browser, powered by Comunica</a>.</p>
+    <a class="logo"><img src="images/fast-and-slow.svg" alt="" /></a>
+    <h1>Query the Web of Linked Data</h1>
+    <p>Fast and Slow, powered by <a href="http://comunica.linkeddatafragments.org/" target="_blank">Comunica</a>.</p>
   </header>
   <!--[if lte IE 9]><b>Your browser is unsupported.</b><div style="display:none"><![endif]-->
   <main>
@@ -21,7 +22,7 @@
       <ul>
         <li>
           <label>Choose datasources</label>
-          <span class="details-toggle" title="Show date option"></span>
+          <!-- <span class="details-toggle" title="Show date option"></span> -->
           <select class="datasources" multiple></select>
         </li>
 
@@ -36,9 +37,7 @@
         </li>
 
         <li>
-          <label>Type or pick a query</label>
-          <select class="query"></select>
-
+          <label>Type a query</label>
           <div>
             <ul class="query-texts">
               <li><a id="sparql"><img src="images/sparql.png" alt="SPARQL" />SPARQL</a></li>
@@ -48,12 +47,12 @@
 
           <div class="query-text-containers">
             <div class="query-text-container" id="tab-sparql">
-              <textarea class="querytext querytext-sparql yasqe" placeholder="Write a SPARQL query or select one from the list"></textarea>
+              <textarea class="querytext querytext-sparql yasqe" placeholder="Write a SPARQL query"></textarea>
             </div>
             <div class="query-text-container" id="tab-graphql">
               <a href="https://gist.github.com/rubensworks/9d6eccce996317677d71944ed1087ea6" class="help" target="_blank">What is GraphQL-LD?</a>
               <label class="muted">GraphQL Query</label>
-              <textarea class="querytext querytext-graphql" placeholder="Write a GraphQL query or select one from the list"></textarea>
+              <textarea class="querytext querytext-graphql" placeholder="Write a GraphQL query"></textarea>
 
               <label class="muted">JSON-LD context</label>
               <textarea class="querycontext querycontext-graphql" placeholder="Write a JSON-LD context to map GraphQL query fields to URIs"></textarea>
@@ -81,21 +80,16 @@
         </li>
       </ul>
     </fieldset>
-
-    <p>
-      Discover how <a href="http://linkeddatafragments.org" target="_blank">Linked Data Fragments</a>
-      enable Web-scale querying of Linked Data.
-    </p>
   </main>
 
-  <footer>
+  <!-- <footer>
     <p>
       ©2013–2019
       <a href="http://www.ugent.be/" target="_blank">Ghent University</a> –
       <a href="http://www.imec.be/" target="_blank">imec</a>, Belgium.
       <a href="https://github.com/comunica/jQuery-Widget.js">Source code</a>.
     </p>
-  </footer>
+  </footer> -->
 
   <script src="scripts/ldf-client-ui.min.js"></script>
   <script>
