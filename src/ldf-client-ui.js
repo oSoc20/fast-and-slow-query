@@ -9,6 +9,7 @@ var N3 = require('n3');
 var YASQE = require('yasgui-yasqe/src/main.js');
 require('yasgui-yasqe/dist/yasqe.css'); // Make webpack import the css as well
 
+
 (function ($) {
   // Query UI main entry point, which mimics the jQuery UI widget interface:
   // - $(element).queryui(options) initializes the widget
@@ -136,10 +137,10 @@ require('yasgui-yasqe/dist/yasqe.css'); // Make webpack import the css as well
       $datasources.change(function () {
         // Inherit the transience of the previous selected datasources
         var newSelection = toHash($datasources.val(), 'persistent');
-        Object.keys(options.selectedDatasources).forEach(function (lastValue) {
-          if (lastValue in newSelection)
-            newSelection[lastValue] = options.selectedDatasources[lastValue];
-        });
+        // Object.keys(options.selectedDatasources).forEach(function (lastValue) {
+        //   if (lastValue in newSelection)
+        //     newSelection[lastValue] = options.selectedDatasources[lastValue];
+        // });
         self._setOption('selectedDatasources', newSelection);
       });
 
@@ -302,8 +303,8 @@ require('yasgui-yasqe/dist/yasqe.css'); // Make webpack import the css as well
           options[key] = value = {};
           value[$options.val()] = 'transient';
         }
-        var valueKeys = value ? Object.keys(value) : [];
         // Select chosen datasources that were already in the list
+        var valueKeys = value ? Object.keys(value) : [];
         var selected = toHash(valueKeys, 'persistent');
         $options.each(function (index) {
           var $option = $(this), url = $(this).val();
